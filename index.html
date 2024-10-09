@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card</title>
+    <style>
+        #container{
+            padding: 40px 20px;
+        }
+        h2{
+            text-align: center;
+        }
+        #user_inp_box{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        #users_box{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        #users_box div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+        }
+        @media (max-width:900px){
+            #users_box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            #users_box div{
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>User card app</h2>
+        <!-- user's all inputs box with button -->
+        <div id="user_inp_box">
+            <label>
+                Name: <input type="text" name="name" id="nameInp">
+            </label>
+            <label>
+                Username: <input type="text" name="username" id="usernameInp">
+            </label>
+            <label>
+                Email: <input type="text" name="email" id="emailInp">
+            </label>
+            <button id="addUserBtn" type="submit">Add User</button>
+        </div>
+        <!-- all users box in which every user will be -->
+        <div id="users_box">
+
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
